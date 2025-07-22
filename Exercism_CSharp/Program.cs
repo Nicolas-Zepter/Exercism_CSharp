@@ -46,7 +46,7 @@ Console.WriteLine(ResistorColor.ColorCode("purple")?.ToString() ?? "null"); //ex
 #endregion
 
 #region Testing Robot
-
+/*
 Robot rob = new();
 Console.WriteLine(rob.TurnOn());
 rob.Reset();
@@ -55,5 +55,25 @@ Robot rob2 = new();
 Console.WriteLine(rob2.TurnOn());
 rob2.Reset();
 Console.WriteLine(rob2.Name);
+*/
+#endregion
+
+#region Testing SpaceAge
+
+int seconds = 788918400; // roughly 25 years old on Earth
+SpaceAge sa = new(seconds);
+
+double earthAge = double.Round(sa.OnEarth(), 2);
+double venusAge = double.Round(sa.OnVenus(), 2);
+double jupiterAge = double.Round(sa.OnJupiter(), 2);
+double marsAge = double.Round(sa.OnMars(), 2);
+
+IDictionary<string, double> writeLine = new Dictionary<string, double>();
+writeLine.Add("Age in Earth seconds", seconds);
+writeLine.Add("Age in Earth years", earthAge);
+writeLine.Add("Age in Venus years", venusAge);
+writeLine.Add("Age in Jupiter years", jupiterAge);
+writeLine.Add("Age in Mars years", marsAge);
+Console.WriteLine(JsonSerializer.Serialize(writeLine, new JsonSerializerOptions { WriteIndented = true }));
 
 #endregion
