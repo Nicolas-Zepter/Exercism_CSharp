@@ -30,9 +30,17 @@ Console.WriteLine(Leap.IsLeapYear(2000)); // expected: true
 #endregion
 
 #region Testing NucleotideCount
-
+/*
 Console.WriteLine(JsonSerializer.Serialize(NucleotideCount.Count("GGACGGATTCTG")));
 Console.WriteLine(JsonSerializer.Serialize(NucleotideCount.Count("CCAGGACTGGTATTCT")));
 //Console.WriteLine(JsonSerializer.Serialize(NucleotideCount.Count("GGADCGGATTCTG"))); //throws ArgumentException
+*/
+#endregion
+
+#region Testing ResistorColor
+
+Console.WriteLine(ResistorColor.ColorCode("red")); //expected: 2
+Console.WriteLine(ResistorColor.ColorCode("yellow")); //expected: 4
+Console.WriteLine(ResistorColor.ColorCode("purple")?.ToString() ?? "null"); //expected: null
 
 #endregion
