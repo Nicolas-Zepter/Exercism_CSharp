@@ -10,8 +10,14 @@ Console.WriteLine(string.Join(",", allergies.List()));
 #endregion
 
 #region Testing Gigasecond
-
+/*
 DateTime test = DateTime.Now;
 Console.WriteLine(Gigasecond.Add(test));
+*/
+#endregion
+
+#region Testing Hamming
+
+Console.WriteLine(Hamming.Distance("GGACGGATTCTG", "AGGACGGATTCT"));
 
 #endregion
