@@ -38,9 +38,22 @@ Console.WriteLine(JsonSerializer.Serialize(NucleotideCount.Count("CCAGGACTGGTATT
 #endregion
 
 #region Testing ResistorColor
-
+/*
 Console.WriteLine(ResistorColor.ColorCode("red")); //expected: 2
 Console.WriteLine(ResistorColor.ColorCode("yellow")); //expected: 4
 Console.WriteLine(ResistorColor.ColorCode("purple")?.ToString() ?? "null"); //expected: null
+*/
+#endregion
+
+#region Testing Robot
+
+Robot rob = new();
+Console.WriteLine(rob.TurnOn());
+rob.Reset();
+Console.WriteLine(rob.Name);
+Robot rob2 = new();
+Console.WriteLine(rob2.TurnOn());
+rob2.Reset();
+Console.WriteLine(rob2.Name);
 
 #endregion
