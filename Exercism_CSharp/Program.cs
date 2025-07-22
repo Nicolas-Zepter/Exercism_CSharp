@@ -17,7 +17,13 @@ Console.WriteLine(Gigasecond.Add(test));
 #endregion
 
 #region Testing Hamming
+//Console.WriteLine(Hamming.Distance("GGACGGATTCTG", "AGGACGGATTCT"));
+#endregion
 
-Console.WriteLine(Hamming.Distance("GGACGGATTCTG", "AGGACGGATTCT"));
+#region Testing Leap Years
+
+Console.WriteLine(Leap.IsLeapYear(1900)); // expected: false
+Console.WriteLine(Leap.IsLeapYear(1999)); // expected: false
+Console.WriteLine(Leap.IsLeapYear(2000)); // expected: true
 
 #endregion
