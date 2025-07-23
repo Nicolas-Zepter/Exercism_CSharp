@@ -59,7 +59,7 @@ Console.WriteLine(rob2.Name);
 #endregion
 
 #region Testing SpaceAge
-
+/*
 int seconds = 788918400; // roughly 25 years old on Earth
 SpaceAge sa = new(seconds);
 
@@ -75,5 +75,13 @@ writeLine.Add("Age in Venus years", venusAge);
 writeLine.Add("Age in Jupiter years", jupiterAge);
 writeLine.Add("Age in Mars years", marsAge);
 Console.WriteLine(JsonSerializer.Serialize(writeLine, new JsonSerializerOptions { WriteIndented = true }));
+*/
+#endregion
+
+#region Testing GradeSchool
+
+GradeSchool gs = new();
+Console.WriteLine(gs.Add("Aimee", 2));
+Console.WriteLine(gs.Add("Aimee", 4));
 
 #endregion
