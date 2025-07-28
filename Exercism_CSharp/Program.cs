@@ -87,11 +87,20 @@ Console.WriteLine(gs.Add("Aimee", 4));
 #endregion
 
 #region Testing Pangram
-
+/*
 Console.WriteLine(Pangram.IsPangram(""));
 Console.WriteLine(Pangram.IsPangram("a2bcdefg3hijkl8mnopqrs5tuvwxyz9"));
 Console.WriteLine(Pangram.IsPangram("abcdefghijklmnoPQRSTUVWXYZ"));
 Console.WriteLine(Pangram.IsPangram("abcdefghijklmnoPQRSTUVWXYZABCDEFGHIJK55"));
 Console.WriteLine(Pangram.IsPangram("bcdefghijklmnoPQRSTUVWXYZB"));
+*/
+#endregion
+
+#region Testing Isogram
+
+Console.WriteLine(Isogram.IsIsogram("abcdefghijklmnopqrstuvwxyz"));
+Console.WriteLine(Isogram.IsIsogram("sequence"));
+Console.WriteLine(Isogram.IsIsogram("abcde-fghijk-lmn15opqrstu-vwxyz"));
+Console.WriteLine(Isogram.IsIsogram("six-year-old"));
 
 #endregion
