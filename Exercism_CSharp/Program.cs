@@ -79,9 +79,19 @@ Console.WriteLine(JsonSerializer.Serialize(writeLine, new JsonSerializerOptions 
 #endregion
 
 #region Testing GradeSchool
-
+/*
 GradeSchool gs = new();
 Console.WriteLine(gs.Add("Aimee", 2));
 Console.WriteLine(gs.Add("Aimee", 4));
+*/
+#endregion
+
+#region Testing Pangram
+
+Console.WriteLine(Pangram.IsPangram(""));
+Console.WriteLine(Pangram.IsPangram("a2bcdefg3hijkl8mnopqrs5tuvwxyz9"));
+Console.WriteLine(Pangram.IsPangram("abcdefghijklmnoPQRSTUVWXYZ"));
+Console.WriteLine(Pangram.IsPangram("abcdefghijklmnoPQRSTUVWXYZABCDEFGHIJK55"));
+Console.WriteLine(Pangram.IsPangram("bcdefghijklmnoPQRSTUVWXYZB"));
 
 #endregion
