@@ -1,4 +1,5 @@
 ﻿using Exercism_CSharp;
+using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 
 #region Testing Allergies
@@ -97,10 +98,39 @@ Console.WriteLine(Pangram.IsPangram("bcdefghijklmnoPQRSTUVWXYZB"));
 #endregion
 
 #region Testing Isogram
-
+/*
 Console.WriteLine(Isogram.IsIsogram("abcdefghijklmnopqrstuvwxyz"));
 Console.WriteLine(Isogram.IsIsogram("sequence"));
 Console.WriteLine(Isogram.IsIsogram("abcde-fghijk-lmn15opqrstu-vwxyz"));
 Console.WriteLine(Isogram.IsIsogram("six-year-old"));
+*/
+#endregion
+
+#region Testing Grains
+
+void SafeWrite(Func<ulong> action)
+{
+    try
+    {
+        Console.WriteLine(action());
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+}
+
+SafeWrite(() => Grains.Total());
+SafeWrite(() => Grains.Square(64));
+SafeWrite(() => Grains.Square(0));
+SafeWrite(() => Grains.Square(1));
+SafeWrite(() => Grains.Square(65));
+SafeWrite(() => Grains.Square(20));
+
+#endregion
+
+#region Testing
+
+
 
 #endregion
